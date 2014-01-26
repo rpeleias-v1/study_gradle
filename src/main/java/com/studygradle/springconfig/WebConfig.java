@@ -1,4 +1,4 @@
-package com.studygradle.springmvc;
+package com.studygradle.springconfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -8,13 +8,13 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages="com.studygradle.springmvc")
+@ComponentScan(basePackages="com.studygradle.controller")
 public class WebConfig {
 	
 	@Bean
 	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("/WEB-INF/view");
+		resolver.setPrefix("/WEB-INF/view/");
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}
